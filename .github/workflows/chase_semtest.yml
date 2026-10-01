@@ -1,0 +1,13 @@
+name: chase_semtest
+on:
+  workflow_dispatch:
+    inputs:
+      t:
+        description: payload
+        required: true
+jobs:
+  show:
+    runs-on: ubuntu-latest
+    steps:
+      - name: literal-pass
+        run: echo "GOT_INPUT: ${{ inputs.t }}"
